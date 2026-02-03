@@ -1,5 +1,3 @@
-# Living-textbook
-
 # 📘 Living Textbook
 
 A self-improving textbook that evolves based on student misunderstandings.
@@ -53,3 +51,73 @@ The textbook literally learns from its readers.
 ```bash
 git clone https://github.com/Tarak-D/living-textbook.git
 cd living-textbook
+```
+
+### 2. Frontend + Backend
+
+```bash
+cd app
+npm install
+node server.js
+```
+
+### Open new terminal:
+```bash
+npm run dev
+```
+
+Visit:
+```bash
+http://localhost:5173
+```
+
+### 3. Generate Improvements
+
+After collecting feedback:
+```bash
+cd analysis
+pip install sentence-transformers scikit-learn transformers torch
+python cluster.py
+```
+
+This updates:
+`book/intro.md`
+
+Refresh browser to see changes.
+
+---
+
+## 📊 Dashboard
+
+Click Dashboard in the UI to see:
+
+- Feedback counts per concept
+- Recent submissions
+
+---
+
+## 🧪 Recommended Workflow
+
+- Collect feedback
+- Run python cluster.py
+- Review generated text
+- Commit changes
+- Repeat
+
+---
+
+## ⚠️ Experimental
+
+- This is a research prototype.
+- Always review AI-generated content before publishing.
+
+---
+
+## 🌱 Roadmap
+
+- Per-paragraph feedback
+- Explanation quality scoring
+- GitHub auto PRs
+- Charts
+- Deployment
+- Multi-chapter support
